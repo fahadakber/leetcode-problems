@@ -109,10 +109,16 @@ public class Main {
         System.out.println(Arrays.toString(nums));
         */
 
-        //169. Majority Element
+        /*//169. Majority Element
         MajorityElement me = new MajorityElement();
         int[] nums = {2,2,1,1,1,2,2};
-        System.out.println(me.majorityElement(nums));
+        System.out.println(me.majorityElement(nums));*/
+
+        int[] nums = {2,7,11,15};
+        int target = 9;
+        TwoSum ts = new TwoSum();
+        ts.twoSum(nums,target);
+
 
 
     }
