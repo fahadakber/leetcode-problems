@@ -69,25 +69,4 @@ public class RotateArray {
             nums[i] = copyArray[i];
         }
     }
-
-   /* class Solution {
-        public void rotate(int[] nums, int k) {
-            int n = nums.length;
-            k %= n;
-            rotate(nums, 0, n-1);
-            rotate(nums, 0, k-1);
-            rotate(nums, k, n-1);
-        }
-
-        public void rotate(int[] nums, int b, int e) {
-            while (b < e) {
-                int i = nums[b];
-                nums[b] = nums[e];
-                nums[e] = i;
-                b++;
-                e--;
-            }
-        }
-    }*/
-
 }
