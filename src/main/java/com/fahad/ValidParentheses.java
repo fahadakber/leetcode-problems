@@ -2,6 +2,7 @@ package com.fahad;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Stack;
 
 /*
 20. Valid Parentheses
@@ -61,6 +62,27 @@ public class ValidParentheses {
         }
         String temp = new String(parenthesesStack);
         return temp.isEmpty();
+    }
+
+    public boolean isValid_StackApproach(String s) {
+        char[] charArray = s.toCharArray();
+        Stack<Character> stack = new Stack<>();
+
+        for(char c: charArray){
+            if(c == '(' || c == '{' || c == '[')
+                stack.push(c);
+
+            if(c == ')' || c == '}' || c == ']'){
+                if(stack.isEmpty())
+                    return false;
+                else if((stack.peek() == '(' && c == ')') || (stack.peek() == '{' && c == '}') || (stack.peek() == '[') && c == ']')
+                    stack.pop();
+                else if(stack.peek() != c)
+                    return false;
+            }
+        }
+
+        return stack.isEmpty();
     }
 
 }
