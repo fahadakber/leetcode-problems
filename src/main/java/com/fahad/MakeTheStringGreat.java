@@ -52,10 +52,10 @@ public class MakeTheStringGreat {
     public String makeGood(String s) {
         Stack<Character> goodString = new Stack<>();
 
-        for(Character currChar : s.toCharArray()){
-            if(!goodString.isEmpty() && Math.abs(goodString.lastElement() - currChar) == 32){
+        for (Character currChar : s.toCharArray()) {
+            if (!goodString.isEmpty() && Math.abs(goodString.lastElement() - currChar) == 32) {
                 goodString.pop();
-            }else{
+            } else {
                 goodString.add(currChar);
             }
         }
@@ -69,10 +69,10 @@ public class MakeTheStringGreat {
 
     public String makeGood_StringBuilder(String s) {
         StringBuilder goodString = new StringBuilder();
-        for(Character c : s.toCharArray()){
-            if(!goodString.isEmpty() && (Math.abs(goodString.charAt(goodString.length() - 1) - c) == 32)){
+        for (Character c : s.toCharArray()) {
+            if (!goodString.isEmpty() && (Math.abs(goodString.charAt(goodString.length() - 1) - c) == 32)) {
                 goodString.deleteCharAt(goodString.length() - 1);
-            }else{
+            } else {
                 goodString.append(c);
             }
         }
