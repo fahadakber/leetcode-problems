@@ -2,6 +2,9 @@ package com.fahad;
 
 /*
 724. Find Pivot Index
+
+Problem Type - Easy
+
 Given an array of integers nums, calculate the pivot index of this array.
 
 The pivot index is the index where the sum of all the numbers strictly to the left of the index
@@ -43,4 +46,7 @@ Constraints:
 
  */
 public class FindPivotIndex {
+    public int pivotIndex(int[] nums) {
+        return -1;
+    }
 }
