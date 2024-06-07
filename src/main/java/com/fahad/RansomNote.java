@@ -57,4 +57,19 @@ public class RansomNote {
         }
         return true;
     }
+
+
+    public boolean canConstruct2(String ransomNote, String magazine) {
+        if(ransomNote.length() > magazine.length()) return false ;
+
+        int[] alphabetsCounter = new int[26] ;
+
+        for(char c : magazine.toCharArray())
+            alphabetsCounter[c-'a']++ ;
+
+        for(char c : ransomNote.toCharArray()){
+            if(alphabetsCounter[c-'a']==0) return false ;
+            alphabetsCounter[c-'a']-- ;
+        }
+        return true ; }
 }
