@@ -78,23 +78,4 @@ public class SimplifyPath {
             return result.toString();
 
     }
-
-    public String simplifyPath_StringBuilder(String path) {
-        StringBuilder formattedPath = new StringBuilder();
-        String[] pathContents = path.split("/");
-
-        for (String dirName : pathContents) {
-            if (dirName.isEmpty() || dirName.equals(".")){
-                continue;
-            }else if (dirName.equals("..")) {
-                if (!formattedPath.isEmpty())
-                    formattedPath.deleteCharAt(formattedPath.length() - 1);
-            } else
-                formattedPath.append("/").append(dirName);
-        }
-        if (formattedPath.isEmpty())
-            return "/";
-        else
-            return new String(formattedPath);
-    }
 }
